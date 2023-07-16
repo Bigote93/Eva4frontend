@@ -3,28 +3,24 @@ import logo_nube from 'assets/imgs/logo_nub.png';
 
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: 'Portal colegio', href: '/portalcolegio' },
+    { name: 'Portal docente', href: '/portaldocente' },
+    { name: 'INACAP', href: 'https://portales.inacap.cl/' },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: 'Producto de muestra', href: '#' },
+    { name: 'Banco preguntas', href: '#' },
+    { name: 'Banco evaluaciones', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'Quienes somos', href: '/nosotros' },
+    { name: 'Servicios', href: '/servicios' },
+    { name: 'Contacto', href: '/contacto' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Nuestro compomiso', href: '#' },
+    { name: 'Privacidad', href: '#' },
+    { name: 'Terminos y condiciones', href: '#' },
   ],
   social: [
     {
@@ -72,7 +68,7 @@ function Footer() {
               height={70}
               className="" />
             <p className="text-base text-gray-500">
-              Sitio web para evaluacion FrontEnd 2023-1.
+              Sitio web desarrollado por Diego Nalli.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (

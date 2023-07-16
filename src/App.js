@@ -1,40 +1,48 @@
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
 
-import Home from './containers/pages/Home';
-import Error404 from './containers/errors/Error404';
-
-import Nosotros from './containers/pages/Nosotros';
-import Servicios from './containers/pages/Servicios';
-import Contacto from './containers/pages/Contacto';
-import Portalcolegio from './containers/pages/Portalcolegio';
-import Portaldocente from './containers/pages/Portaldocente';
-import Ayuda from './containers/pages/Ayuda';
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import AnimatedRoutes from "AnimatedRoutes";
 
 function App() {
+
+
+
   return (
-    <Provider store= {store}> 
-      <Router>
-      <Routes>
-        {/* Error Display */}
-        <Route path="*" element= {<Error404/>}/>
+    <HelmetProvider>
+      <Helmet>
+        <title>¡RappidEva! | Software Educacional</title>
+        <meta name="description" content="Genera tus propias evaluaciones con RappidEva!" />
+        <meta name="keywords" content="profesor, evaluaciones, software educativo" />
+        <meta name="robots" content="all" />
+        <link rel="canonical" href="https://rappideva.web.app/"></link>
+        <meta name="author" content="Diego Nalli" />
+        <meta name="publisher" content="Diego Nalli" />
 
-        {/* Home Display */}
-        <Route path="/" element= {<Home/>}/>
-        <Route path="/nosotros" element= {<Nosotros/>}/>
-        <Route path="/servicios" element= {<Servicios/>}/>
-        <Route path="/contacto" element= {<Contacto/>}/>
-        <Route path="/portalcolegio" element= {<Portalcolegio/>}/>
-        <Route path="/portaldocente" element= {<Portaldocente/>}/>
-        <Route path="/ayuda" element= {<Ayuda/>}/>
+        {/* Social media tags */}
+        <meta property="og:title" content="¡RappidEva! | Software Educacional" />
+        <meta property="og:description" content="Genera tus propias evaluaciones con RappidEva!" />
+        <meta property="og:url" content="https://rappideva.web.app/" />
+        <meta property="og:image" content="https://bafybeiga4w7o2esxj2nv5oybvycaqbv3zonseep45abaterslus34vnu6a.ipfs.w3s.link/logo_nub.png" />
+        <meta name="twitter:title" content="¡RappidEva! | Software Educacional" />
+        <meta name="twitter:description" content="Genera tus propias evaluaciones con RappidEva!" />
+        <meta name="twitter:image" content="https://bafybeiga4w7o2esxj2nv5oybvycaqbv3zonseep45abaterslus34vnu6a.ipfs.w3s.link/logo_nub.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
 
-      </Routes>
-    </Router>
+      <Provider store={store}>
+        <Router>
 
-    </Provider>
-    
+
+          <AnimatedRoutes/>
+        </Router>
+
+      </Provider>
+
+    </HelmetProvider>
+
   );
 }
 

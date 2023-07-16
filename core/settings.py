@@ -169,17 +169,17 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000','https://rappideva.web.app/','https://rappideva.firebaseapp.com/']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','https://rappideva.web.app/','https://rappideva.firebaseapp.com/']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['portafolioNalli.com', 'www.portafolioNalli.com']
+    ALLOWED_HOSTS = ['portafolioNalli.com', 'www.portafolioNalli.com', 'https://rappideva.web.app/','https://rappideva.web.app/']
     DATABASES = {
         'default': '',
     }
     DATABASES["default"]["ATOMIC_REQUEST"] = True
 
-    CORS_ORIGIN_WHITELIST = ['https://portafolioNalli.com']
-    CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']
+    CORS_ORIGIN_WHITELIST = ['https://portafolioNalli.com', 'https://rappideva.web.app/','https://rappideva.firebaseapp.com/']
+    CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://rappideva.web.app/','https://rappideva.firebaseapp.com/']

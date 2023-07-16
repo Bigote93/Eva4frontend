@@ -1,10 +1,15 @@
+import Header from "components/rappidchat/header";
 import Footer from "../../components/navigation/Footer";
 import Navbar from "../../components/navigation/Navbar";
 import Layout from "../../hocs/layouts/Layout";
 import { useEffect } from 'react';
+import Promopersonas from "components/rappidchat/promo";
+import Testimonio from "components/rappidchat/testimonio";
+import Features from "components/rappidchat/features";
+import Listaacciones from "components/rappidchat/acciones";
 import { Helmet } from "react-helmet-async";
 
-function Portaldocente() {
+function Rappidchat() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
@@ -12,7 +17,7 @@ function Portaldocente() {
         <Layout>
 
             <Helmet>
-                <title>¡RappidEva! | Portal Docente</title>
+                <title>¡RappidEva! | RappidChat</title>
                 <meta name="description" content="Genera tus propias evaluaciones con RappidEva!" />
                 <meta name="keywords" content="profesor, evaluaciones, software educativo" />
                 <meta name="robots" content="all" />
@@ -33,7 +38,11 @@ function Portaldocente() {
 
             <Navbar />
             <div className="pt-32">
-                Portaldocente
+                <Header />
+                <Promopersonas />
+                <Testimonio />
+                <Features />
+                <Listaacciones />
             </div>
 
             <Footer />
@@ -41,4 +50,4 @@ function Portaldocente() {
     );
 }
 
-export default Portaldocente;
+export default Rappidchat;

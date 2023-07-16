@@ -1,10 +1,16 @@
 import { connect } from "react-redux";
 
+import {motion} from 'framer-motion';
+
 function Layout({children}){
     return(
-        <div>
+        <motion.div
+        initial={{opacity:0, transition: {duration: 1}}}
+        animate={{opacity:1, transition: {duration: 1}}}
+        exit={{opacity:0, transition: {duration: 1}}}
+        >
             {children}
-        </div>
+        </motion.div>
 
     );
 }
