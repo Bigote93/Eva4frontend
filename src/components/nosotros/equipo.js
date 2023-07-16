@@ -1,4 +1,6 @@
 import diegofoto from 'assets/imgs/diegoface.jpg';
+import chatgptfoto from 'assets/imgs/chatgptimagen.jpg';
+import solopython from 'assets/imgs/solopythonfoto2.png';
 
 /*
   This example requires some changes to your config:
@@ -19,6 +21,22 @@ const people = [
     name: 'Diego Nalli',
     role: 'Analista Programador (INACAP)',
     src: diegofoto,
+    //imageUrl:'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    github: 'https://github.com/Bigote93',
+    linkedinUrl: 'https://www.linkedin.com/in/diego-nalli-garcia/',
+  },
+  {
+    name: 'ChatGPT-4',
+    role: 'Copiloto',
+    src: chatgptfoto,
+    //imageUrl:'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    github: 'https://github.com/Bigote93',
+    linkedinUrl: 'https://www.linkedin.com/in/diego-nalli-garcia/',
+  },
+  {
+    name: 'Solo Python',
+    role: 'Tutor',
+    src: solopython,
     //imageUrl:'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     github: 'https://github.com/Bigote93',
     linkedinUrl: 'https://www.linkedin.com/in/diego-nalli-garcia/',
@@ -44,9 +62,9 @@ export default function Equipo() {
           >
             {people.map((person) => (
               <li key={person.name}>
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div className="aspect-w-3 aspect-h-2">
-                    <img className="rounded-lg object-cover shadow-lg" src={person.src} alt="" />
+                    <img className="rounded-xl object-fill shadow-lg" src={person.src} alt="" />
                   </div>
 
                   <div className="space-y-2">
